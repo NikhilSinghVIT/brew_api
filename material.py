@@ -1,4 +1,4 @@
-#SLIDE6 and SLIDE8----------------------------------------------
+#SLIDE16 and SLIDE19----------------------------------------------
 #Printing Hello World with Flask.
 
 from flask import Flask, jsonify, request
@@ -9,7 +9,7 @@ def index():
 	return "<h1>Hello World!</h1>"#-------<h1> is a HTML header tag,you can return a normal string as well---------
 
 
-#SLIDE7----------------------------------------------------------
+#SLIDE17----------------------------------------------------------
 #Intro to Routes.
 #Making another route to properly understand the concept of routes.
 
@@ -22,7 +22,7 @@ def home():
 def json():
 	return jsonify({'key1':'value1','key2':'value2'})
 
-#SLIDE9----------------------------------------------------------
+#SLIDE21----------------------------------------------------------
 #Route Variables
 
 @app.route('/variable',methods=['GET','POST'],defaults={'name':'User'})
@@ -30,7 +30,7 @@ def json():
 def variable(name):
 	return '<h1>Hello {},you are on the variables page'.format(name)
 
-#SLIDE10-----------------------------------------------------------
+#SLIDE22-----------------------------------------------------------
 #Requesting Query String
 
 @app.route('/query')
@@ -40,7 +40,7 @@ def query():
 	loc = request.args.get('location')
 	return '<h1> Hello {} ,you are from {}'.format(nm,loc)
 
-#SLIDE11------------------------------------------------------------
+#SLIDE23------------------------------------------------------------
 
 @app.route('/theform',methods=['POST','GET'])
 def form():
@@ -60,7 +60,7 @@ def process():
 	#return redirect(url_for('home', name=name, location=location)) for the redirect, url_for slide
 
 
-#SLIDE12------------------------------------------------------------
+#SLIDE24------------------------------------------------------------
 #requesting json data
 @app.route('/processjson', methods=['POST'])
 def processjson():
